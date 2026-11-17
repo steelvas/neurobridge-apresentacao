@@ -104,7 +104,7 @@ h1,h2{text-wrap:balance}
 .tile{box-shadow:0 2px 0 #1537400e}
 nav.page-nav{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;padding:18px 0;margin-top:22px;border-top:1px solid #b2c6bf;font-size:15px}
 .page-nav a{font-weight:650}.page-nav a:only-child{margin-left:auto}
-.embed .page-nav{display:none}
+.embed .page-nav{display:flex}
 .full{display:none;margin:20px 0 0;font-size:14px}.embed .full{display:block}
 .chapters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .chapter{background:white;border:1px solid #bdceca;border-radius:14px;padding:18px;border-top:4px solid var(--teal)}
@@ -117,3 +117,11 @@ nav.page-nav{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;
 .team-meta{font-size:14px;color:#4f625f}
 @media(max-width:650px){.chapters{grid-template-columns:1fr}.hero:after{width:105px;height:105px;right:-60px;top:-65px;border-width:13px}.hero:before{display:none}.hero h1{max-width:100%}.hero .lead{max-width:100%}nav.page-nav{flex-direction:column}}
 @media print{nav,.full,.actions-home{display:none!important}.hero{color:#153740;background:white;border:1px solid #b6c5be}.hero h1,.hero .flag,.hero .lead{color:#153740}.hero:before,.hero:after{display:none}.tile,table,summary{break-inside:avoid}}
+
+.team-box{padding:clamp(14px,3vw,22px);border:1px solid #bfcec6;border-top:4px solid #176a68;background:#fff;border-radius:14px}
+.team-box h2{margin:0 0 14px}.people{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,175px),1fr));gap:9px}
+.person{display:flex;align-items:center;gap:9px;color:#123f43;text-decoration:none;border:1px solid #c6d6ce;border-radius:10px;padding:10px;background:#f3f7f3}
+.person:hover{background:#e4f0e9;border-color:#39756f}.person:hover b{text-decoration:underline}
+.initials{flex:none;width:36px;height:36px;display:grid;place-items:center;border-radius:50%;background:#dbe9e2;color:#165451;font-weight:bold;font-size:13px}
+.handle{display:block;overflow-wrap:anywhere;color:#486363;font-size:14px}
+.embed .chapters+h2,.embed .chapters+h2+.team-box{display:none}
